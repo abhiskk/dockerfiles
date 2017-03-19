@@ -1,0 +1,24 @@
+DOCKER COMMANDS
+
+# list containers
+docker ps
+docker ps -a
+
+# list images
+docker images
+
+# build image
+docker build -t pytorch-bleeding-edge .
+
+# run container and launch from inside the container
+docker run -it pytorch-bleeding-edge /bin/sh
+
+# tag and push
+docker tag 8860d5b68fb9 darkstar112358/pytorch-bleeding-edge:latest
+docker push darkstar112358/pytorch-bleeding-edge
+
+# delete container
+docker rm container-name
+
+# delete image
+docker rmi image-name
